@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "weather_api"
+version = "0.1.0"
+description = ""
+authors = ["Deniz <dakdeniz@hotmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.1.2"
+djangorestframework = "^3.14.0"
+django-redis = "^5.2.0"
+django-cors-headers = "^3.13.0"
+requests = "^2.28.1"
+dataclasses-json = "^0.5.7"
+pyhumps = "^3.8.0"
+python-dotenv = "^0.21.0"
+
+[tool.poetry.dev-dependencies]
+pytest-django = "^4.5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

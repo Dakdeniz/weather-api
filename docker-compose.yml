@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  weatherapi:
+    image: weatherapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    environment:
+      - DEBUG=False
+      - ACCUWEATHER_API_KEY=dcbSvm3UA687VOTPHgxb7vZ4eLwxzqx2
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+    command: python manage.py runserver 0.0.0.0:8000
+
+  redis:
+    image: redis:alpine
